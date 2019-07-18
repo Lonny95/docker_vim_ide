@@ -1,0 +1,15 @@
+version: '3.4'
+services:
+  venv:
+    image: venv
+    build:
+      context: .
+      dockerfile: Dockerfile
+    network_mode: host
+    container_name: venv
+    ports:
+        - '8080'
+        - '8000'
+    entrypoint: /root/entrypoint.sh
+    volumes:
+        - './target:/root/target'
