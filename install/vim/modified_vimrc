@@ -331,23 +331,23 @@ map <leader>pp :setlocal paste!<cr>
 " https://github.com/ycm-core/YouCompleteMe/blob/master/doc/youcompleteme.txt
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GoTo Commands
-map <leader>jg :YcmCompleter GoTo
-map <leader>jf :YcmCompleter GoToDefinition
-map <leader>jc :YcmCompleter GoToDeclaration
-map <leader>jr :YcmCompleter GoToReferences
-map <leader>jim :YcmCompleter GoToImplementation
-map <leader>jt :YcmCompleter GoToType
-map <leader>jin :YcmCompleter GoToInclude
+map <leader>jg :YcmCompleter GoTo<cr>
+map <leader>jf :YcmCompleter GoToDefinition<cr>
+map <leader>jc :YcmCompleter GoToDeclaration<cr>
+map <leader>jr :YcmCompleter GoToReferences<cr>
+map <leader>jim :YcmCompleter GoToImplementation<cr>
+map <leader>jt :YcmCompleter GoToType<cr>
+map <leader>jin :YcmCompleter GoToInclude<cr>
 
 " Semantic Information Commands
-map <leader>st :YcmCompleter GetType
-map <leader>sd :YcmCompleter GetDoc
-map <leader>sp :YcmCompleter GetParent
+map <leader>st :YcmCompleter GetType<cr>
+map <leader>sd :YcmCompleter GetDoc<cr>
+map <leader>sp :YcmCompleter GetParent<cr>
 
 " Refactoring Commands
-map <leader>rf :YcmCompleter FixIt
+map <leader>rf :YcmCompleter FixIt<cr>
 function! Rename(name)
-    :YcmCompleter RefactorRename a:name
+    :YcmCompleter RefactorRename a:name<cr>
 endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

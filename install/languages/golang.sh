@@ -1,8 +1,9 @@
 #!/bin/bash
-go_ver=1.12.6
+#go_ver=$( echo $@ | sed -E 's/.*--go-ver=([^ ]+).*/\1/')
+#go_ver=1.12.6
 #go_ver=1.9.4
-wget https://dl.google.com/go/go${go_ver}.linux-amd64.tar.gz
-tar xzf go$go_ver.linux-amd64.tar.gz
+wget https://dl.google.com/go/go${GOV}.linux-amd64.tar.gz
+tar xzf go${GOV}.linux-amd64.tar.gz
 mv go /usr/local/go
 # export GOROOT=/usr/local/go
 # export GOPATH=$HOME/go

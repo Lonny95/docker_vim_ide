@@ -7,5 +7,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-nvm install --lts
+node_ver=$( echo $@ | sed -E 's/.*--node-ver=([^ ]+).*/\1/')
+nvm install $NOV
 npm install -g typescript

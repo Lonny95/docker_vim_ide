@@ -1,3 +1,6 @@
+NodeVersion ?=10.16.0
+GoVersion ?=1.12.6
+
 dist/%:
 	@echo "Everything you put in dist will be copied to container"
 	mkdir dist
@@ -7,7 +10,8 @@ dist/%:
 	mkdir .ssh
 
 build_no_cache: .ssh dist
-	docker-compose build --no-cache venv
+	echo --go-ver="${GoVersion}" --node-ver="${NodeVersion}"
+	docker-compose build --build-arg GOV="${GoVersion}" --build-arg NOV="${NodeVersion}" --no-cache venv 
 	docker run -d --entrypoint /root/entrypoint.sh venv
 build_all: .ssh dist
 	docker-compose up -d
