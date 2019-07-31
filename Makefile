@@ -12,7 +12,7 @@ dist/%:
 build_no_cache: .ssh dist
 	echo --go-ver="${GoVersion}" --node-ver="${NodeVersion}"
 	docker-compose build --build-arg GOV="${GoVersion}" --build-arg NOV="${NodeVersion}" --no-cache venv 
-	docker run -d --entrypoint /root/entrypoint.sh venv
+	docker-compose run -d --entrypoint /root/entrypoint.sh venv
 build_all: .ssh dist
 	docker-compose up -d
 attach:

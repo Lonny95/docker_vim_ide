@@ -9,4 +9,9 @@ export NVM_DIR="$HOME/.nvm"
 
 node_ver=$( echo $@ | sed -E 's/.*--node-ver=([^ ]+).*/\1/')
 nvm install $NOV
+
+npm config set user 0
+npm config set unsafe-perm true
+
+npm i -g yarn
 npm install -g typescript

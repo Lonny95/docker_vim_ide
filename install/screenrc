@@ -1,0 +1,9 @@
+caption always "%{= kw}%-w%{= gW}%n %t%{-}%+w %-= %Y-%m-%d %C:%s"
+shell /bin/bash
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+altscreen on
+defbce on
+encoding utf8 utf8
+defencoding UTF-8
+defutf8 on
+set term=screen-256color

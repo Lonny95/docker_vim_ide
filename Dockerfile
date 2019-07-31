@@ -8,6 +8,6 @@ COPY .ssh/ /root/.ssh
 COPY entrypoint.sh /root/entrypoint.sh
 RUN /root/install/install-deps.sh
 RUN /root/install/install-subs.sh languages --go-ver=$GOV --node-ver=$NOV
-ENV PATH=$PATH:/usr/local/go/bin:/root/.cargo/bin:/root/.nvm/versions/node/v$GOV/bin
+ENV PATH=$PATH:/usr/local/go/bin:/root/.cargo/bin:/root/.nvm/versions/node/v$NOV/bin
 RUN /root/install/install-subs.sh vim
 ENTRYPOINT /bin/bash
