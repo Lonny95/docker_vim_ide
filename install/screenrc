@@ -1,8 +1,11 @@
-caption always "%{= kw}%-w%{= gW}%n %t%{-}%+w %-= %Y-%m-%d %C:%s"
+backtick 0 30 30 bash -c 'hostname -i | cut -d" " -f1'
+caption always "%{= kw}%-w%{= gW}%n %t%{-}%+w %-= %Y-%m-%d %C:%s    ip: %`"
 shell /bin/bash
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+termcapinfo xterm* ti@:te@
 altscreen on
 defbce on
+startup_message off
 encoding utf8 utf8
 defencoding UTF-8
 defutf8 on
